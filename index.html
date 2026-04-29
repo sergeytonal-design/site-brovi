@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Анастасия Белова — брови и ресницы</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -23,7 +24,13 @@
     }
 
     header {
-      padding: 24px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(255, 247, 245, 0.92);
+      backdrop-filter: blur(12px);
+      padding: 20px 0;
+      border-bottom: 1px solid #f3d8df;
     }
 
     .nav {
@@ -36,7 +43,6 @@
     .logo {
       font-size: 22px;
       font-weight: 700;
-      color: #2b2b2b;
     }
 
     .logo span {
@@ -58,13 +64,27 @@
       text-decoration: none;
     }
 
-    .top-btn {
+    .top-btn,
+    .main-btn {
       background: #cf5f7d;
       color: white;
-      padding: 13px 22px;
-      border-radius: 12px;
+      padding: 18px 32px;
+      border-radius: 16px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 17px;
+      box-shadow: 0 18px 40px rgba(207, 95, 125, 0.32);
+      display: inline-block;
+    }
+
+    .main-btn {
+      animation: pulse 2.2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(207,95,125,0.45); }
+      70% { box-shadow: 0 0 0 14px rgba(207,95,125,0); }
+      100% { box-shadow: 0 0 0 0 rgba(207,95,125,0); }
     }
 
     .hero {
@@ -72,18 +92,18 @@
       grid-template-columns: 1fr 1fr;
       gap: 46px;
       align-items: center;
-      padding: 55px 0 45px;
+      padding: 70px 0 45px;
     }
 
     .label {
       color: #c85f7d;
       font-style: italic;
-      font-size: 20px;
-      margin-bottom: 20px;
+      font-size: 22px;
+      margin-bottom: 22px;
     }
 
     h1 {
-      font-size: 52px;
+      font-size: 56px;
       line-height: 1.12;
       margin: 0 0 24px;
       font-family: Georgia, serif;
@@ -109,33 +129,55 @@
       flex-wrap: wrap;
     }
 
-    .main-btn {
-      background: #cf5f7d;
-      color: white;
-      padding: 17px 30px;
-      border-radius: 14px;
-      text-decoration: none;
-      font-weight: 700;
-      box-shadow: 0 12px 30px rgba(207, 95, 125, 0.25);
-    }
-
     .answer {
       border: 1px solid #e4a8b8;
-      padding: 15px 22px;
+      padding: 16px 24px;
       border-radius: 999px;
       color: #555;
-      background: rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.75);
+      font-size: 16px;
     }
 
     .hero-img {
-      min-height: 520px;
+      min-height: 540px;
       border-radius: 34px;
       background:
-        linear-gradient(90deg, rgba(255,247,245,0.1), rgba(255,247,245,0.1)),
-        url("https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=900&q=80");
+        linear-gradient(90deg, rgba(255,247,245,0.05), rgba(255,247,245,0.05)),
+        url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80");
       background-size: cover;
       background-position: center;
-      box-shadow: 0 24px 70px rgba(0,0,0,0.12);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.14);
+    }
+
+    .trust {
+      margin: 20px 0 55px;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .trust-grid div {
+      background: white;
+      padding: 24px;
+      border-radius: 20px;
+      border: 1px solid #f0d6dd;
+      text-align: center;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.04);
+    }
+
+    .trust-grid strong {
+      display: block;
+      font-size: 30px;
+      color: #cf5f7d;
+      margin-bottom: 6px;
+    }
+
+    .trust-grid span {
+      color: #666;
+      font-size: 15px;
     }
 
     .benefits {
@@ -146,7 +188,7 @@
     }
 
     .benefit {
-      background: rgba(255,255,255,0.75);
+      background: rgba(255,255,255,0.8);
       padding: 22px;
       border-radius: 20px;
       border: 1px solid #f0d6dd;
@@ -154,7 +196,6 @@
 
     .benefit strong {
       display: block;
-      color: #2b2b2b;
       margin-bottom: 8px;
     }
 
@@ -171,7 +212,7 @@
 
     h2 {
       font-family: Georgia, serif;
-      font-size: 36px;
+      font-size: 38px;
       text-align: center;
       font-weight: 500;
       margin-bottom: 34px;
@@ -216,7 +257,7 @@
     }
 
     .step {
-      background: #cf5f7d;
+      background: linear-gradient(135deg, #cf5f7d, #b84f6e);
       color: white;
       padding: 30px;
       border-radius: 24px;
@@ -290,12 +331,13 @@
       }
 
       h1 {
-        font-size: 38px;
+        font-size: 40px;
       }
 
       .benefits,
       .cards,
-      .steps {
+      .steps,
+      .trust-grid {
         grid-template-columns: 1fr;
       }
 
@@ -309,6 +351,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -329,6 +372,7 @@
 </header>
 
 <main>
+
   <div class="container hero">
     <div>
       <div class="label">Красота в деталях</div>
@@ -353,6 +397,23 @@
     <div class="hero-img"></div>
   </div>
 
+  <section class="trust">
+    <div class="container trust-grid">
+      <div>
+        <strong>5+ лет</strong>
+        <span>опыта работы</span>
+      </div>
+      <div>
+        <strong>500+</strong>
+        <span>довольных клиентов</span>
+      </div>
+      <div>
+        <strong>100%</strong>
+        <span>стерильность и аккуратность</span>
+      </div>
+    </div>
+  </section>
+
   <div class="container benefits">
     <div class="benefit">
       <strong>Премиум-материалы</strong>
@@ -367,8 +428,8 @@
       <p>Чистота и безопасность на первом месте.</p>
     </div>
     <div class="benefit">
-      <strong>Опыт и практика</strong>
-      <p>Более 5 лет помогаю девушкам выглядеть увереннее.</p>
+      <strong>Естественный результат</strong>
+      <p>Образ выглядит ухоженно, но без лишней перегрузки.</p>
     </div>
   </div>
 
@@ -409,11 +470,11 @@
 
         <div class="card">
           <div class="icon">🎁</div>
-          <h3>Подарочный сертификат</h3>
+          <h3>Сертификат</h3>
           <ul>
-            <li>Красивый подарок</li>
-            <li>Для подруги или близкого человека</li>
+            <li>Подарок для близкого человека</li>
             <li>Можно выбрать услугу</li>
+            <li>Красивое оформление</li>
           </ul>
         </div>
       </div>
@@ -464,6 +525,7 @@
       </div>
     </div>
   </section>
+
 </main>
 
 <footer>
