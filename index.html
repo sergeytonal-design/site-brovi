@@ -3,24 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Брови, ресницы и макияж</title>
+  <title>Анастасия Белова — брови, ресницы и макияж</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: Arial, sans-serif;
-      background: #f6f7fb;
+      background: #f5f6fa;
       color: #102033;
     }
 
     .container {
       width: 90%;
-      max-width: 1120px;
+      max-width: 1180px;
       margin: 0 auto;
     }
 
@@ -33,15 +29,16 @@
 
     .logo {
       font-size: 22px;
-      font-weight: 700;
+      font-weight: 800;
+      letter-spacing: 0.2px;
     }
 
     .logo span {
       display: block;
-      margin-top: 4px;
+      margin-top: 5px;
       color: #e2184f;
       font-size: 14px;
-      letter-spacing: 1px;
+      letter-spacing: 1.4px;
       text-transform: uppercase;
     }
 
@@ -49,175 +46,228 @@
       display: inline-block;
       background: #e2184f;
       color: #ffffff;
-      padding: 16px 28px;
-      border-radius: 12px;
+      padding: 16px 30px;
+      border-radius: 14px;
       text-decoration: none;
-      font-weight: 700;
+      font-weight: 800;
+      box-shadow: 0 14px 30px rgba(226, 24, 79, 0.25);
     }
 
     .hero {
-      margin-top: 25px;
-      min-height: 560px;
-      border-radius: 28px;
+      margin-top: 18px;
+      min-height: 620px;
+      border-radius: 34px;
       overflow: hidden;
       position: relative;
       background:
-        linear-gradient(90deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.45) 42%, rgba(0,0,0,0.12) 100%),
-        url("brovi.jpg");
+        linear-gradient(90deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.56) 42%, rgba(0,0,0,0.18) 100%),
+        url("брови.jpg");
       background-size: cover;
       background-position: center;
       display: flex;
       align-items: center;
-      padding: 64px;
+      padding: 70px;
       color: #ffffff;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+      box-shadow: 0 26px 70px rgba(0,0,0,0.18);
     }
 
-    .hero-content {
-      max-width: 570px;
+    .hero-content { max-width: 610px; }
+
+    .label {
+      display: inline-block;
+      margin-bottom: 22px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.24);
+      font-size: 16px;
     }
 
     .hero h1 {
       font-family: Georgia, serif;
-      font-size: 50px;
-      line-height: 1.12;
+      font-size: 56px;
+      line-height: 1.08;
       margin-bottom: 24px;
+      text-shadow: 0 6px 24px rgba(0,0,0,0.35);
     }
 
     .hero p {
-      font-size: 21px;
-      line-height: 1.5;
-      margin-bottom: 28px;
+      font-size: 22px;
+      line-height: 1.55;
+      margin-bottom: 30px;
+      max-width: 560px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
     .answer {
-      margin-top: 18px;
-      font-size: 18px;
+      padding: 15px 22px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.22);
+      font-size: 17px;
     }
 
-    section {
-      margin: 70px 0;
+    .trust {
+      margin: 30px 0 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
     }
 
-    h2 {
-      font-size: 34px;
-      margin-bottom: 28px;
+    .trust div {
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 22px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.06);
+      text-align: center;
     }
+
+    .trust strong {
+      display: block;
+      color: #e2184f;
+      font-size: 28px;
+      margin-bottom: 6px;
+    }
+
+    .trust span { color: #596579; font-size: 15px; }
+
+    section { margin: 80px 0; }
+
+    h2 { font-size: 36px; margin-bottom: 30px; }
 
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 24px;
     }
 
     .card {
       background: #ffffff;
-      padding: 28px;
-      border-radius: 20px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+      padding: 32px;
+      border-radius: 24px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.06);
       font-size: 20px;
-      line-height: 1.5;
+      line-height: 1.55;
+      min-height: 170px;
     }
 
-    .card h3 {
-      margin-bottom: 12px;
-      font-size: 24px;
-    }
+    .card h3 { font-size: 25px; margin-bottom: 12px; }
+
+    .card p { color: #4b5563; }
 
     .contact {
-      background: #ffffff;
-      padding: 38px;
-      border-radius: 24px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+      background: linear-gradient(135deg, #e2184f, #b91542);
+      color: #ffffff;
+      padding: 42px;
+      border-radius: 28px;
+      box-shadow: 0 24px 60px rgba(226, 24, 79, 0.22);
     }
+
+    .contact h2 { margin-bottom: 16px; color: #ffffff; }
 
     .contact p {
       font-size: 20px;
-      margin-bottom: 12px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .contact .btn {
+      margin-top: 18px;
+      background: #ffffff;
+      color: #e2184f;
+      box-shadow: none;
     }
 
     footer {
       text-align: center;
       padding: 40px 0;
-      color: #777777;
+      color: #7b8494;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
       header {
         flex-direction: column;
-        gap: 16px;
         align-items: flex-start;
+        gap: 18px;
       }
 
       .hero {
-        padding: 35px;
-        min-height: 500px;
+        min-height: 560px;
+        padding: 38px;
         background:
-          linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.58)),
-          url("brovi.jpg");
+          linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
+          url("брови.jpg");
         background-size: cover;
         background-position: center;
       }
 
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
+      .hero h1 { font-size: 38px; }
+      .hero p { font-size: 18px; }
+      .cards, .trust { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
 <body>
-
   <div class="container">
-
     <header>
       <div class="logo">
         Анастасия Белова
         <span>Брови · Ресницы · Макияж</span>
       </div>
-
       <a href="#contact" class="btn">Записаться</a>
     </header>
 
     <div class="hero">
       <div class="hero-content">
+        <div class="label">Красота без перегруза</div>
+
         <h1>Брови, ресницы и макияж,<br>которые подчёркивают вашу естественную красоту</h1>
 
         <p>
           Подберу форму, оттенок и образ так, чтобы взгляд стал выразительнее,
-          а результат выглядел аккуратно и естественно каждый день.
+          а результат выглядел аккуратно, свежо и естественно каждый день.
         </p>
 
-        <a href="#contact" class="btn">Записаться</a>
-
-        <div class="answer">
-          ⚡ Отвечаю в течение 10–15 минут
+        <div class="hero-actions">
+          <a href="#contact" class="btn">Записаться</a>
+          <div class="answer">⚡ Отвечаю в течение 10–15 минут</div>
         </div>
+      </div>
+    </div>
+
+    <div class="trust">
+      <div>
+        <strong>5+ лет</strong>
+        <span>опыта работы</span>
+      </div>
+      <div>
+        <strong>500+</strong>
+        <span>довольных клиентов</span>
+      </div>
+      <div>
+        <strong>100%</strong>
+        <span>аккуратность и стерильность</span>
       </div>
     </div>
 
     <section>
       <h2>Услуги</h2>
-
       <div class="cards">
         <div class="card">
           <h3>Брови</h3>
           <p>Коррекция, окрашивание и ламинирование. Подбираю форму под лицо, а не «как у всех».</p>
         </div>
-
         <div class="card">
           <h3>Ресницы</h3>
-          <p>Классическое и объёмное наращивание для аккуратного и выразительного взгляда.</p>
+          <p>Классическое и объёмное наращивание для аккуратного, выразительного взгляда.</p>
         </div>
-
         <div class="card">
           <h3>Макияж</h3>
           <p>Дневной, вечерний и для фотосессий. Образ без перегруза и лишней яркости.</p>
@@ -227,7 +277,6 @@
 
     <section>
       <h2>Для кого подходит</h2>
-
       <div class="cards">
         <div class="card">Для тех, кто хочет ухоженный вид без ощущения «перебора»</div>
         <div class="card">Для тех, кому важно выглядеть естественно и аккуратно</div>
@@ -237,7 +286,6 @@
 
     <section>
       <h2>Почему выбирают</h2>
-
       <div class="cards">
         <div class="card">Подбираю форму и оттенок под ваши черты лица</div>
         <div class="card">Работаю спокойно, аккуратно и без спешки</div>
@@ -246,24 +294,18 @@
     </section>
 
     <section id="contact">
-      <h2>Записаться</h2>
-
       <div class="contact">
+        <h2>Записаться</h2>
         <p><strong>Telegram:</strong> @beauty_example</p>
         <p><strong>Время работы:</strong> ежедневно с 9:00 до 20:00</p>
         <p><strong>Город:</strong> пример города</p>
-
-        <br>
-
         <a href="#" class="btn">Написать</a>
       </div>
     </section>
-
   </div>
 
   <footer>
     © 2026 Анастасия Белова. Демонстрационный сайт-визитка.
   </footer>
-
 </body>
 </html>
