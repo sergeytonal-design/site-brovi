@@ -1,199 +1,197 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Брови, ресницы и макияж</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Брови, ресницы и макияж</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #eef2f7;
-      color: #102033;
-    }
+body {
+  background: #f6f7fb;
+  color: #102033;
+}
 
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-    header {
-      padding: 20px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-    }
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
 
-    .logo span {
-      display: block;
-      font-size: 14px;
-      color: #e2184f;
-      margin-top: 4px;
-    }
+.logo span {
+  display: block;
+  font-size: 12px;
+  color: #e11d48;
+  margin-top: 3px;
+}
 
-    .btn {
-      background: #e2184f;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.btn {
+  background: #e11d48;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    /* ГЕРОЙ */
-    .hero {
-      position: relative;
-      margin-top: 20px;
-      border-radius: 20px;
-      overflow: hidden;
-    }
+/* HERO */
+.hero {
+  margin-top: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
 
-    .hero img {
-      width: 100%;
-      display: block;
-    }
+.hero img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
 
-    .hero-text {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 25px;
-      background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.7),
-        rgba(0,0,0,0.3),
-        transparent
-      );
-      color: white;
-    }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1));
+}
 
-    .hero-text h1 {
-      font-size: 30px;
-      line-height: 1.3;
-      margin-bottom: 10px;
-    }
+.hero-text {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: white;
+  max-width: 600px;
+}
 
-    .hero-text p {
-      font-size: 16px;
-    }
+.hero-text h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
 
-    section {
-      margin-top: 50px;
-    }
+.hero-text p {
+  font-size: 16px;
+}
 
-    h2 {
-      margin-bottom: 20px;
-      font-size: 26px;
-    }
+/* BLOCKS */
+section {
+  margin-top: 50px;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+h2 {
+  margin-bottom: 20px;
+}
 
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 14px;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-    .contact {
-      background: white;
-      padding: 25px;
-      border-radius: 14px;
-    }
-  </style>
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* CONTACT */
+.contact {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+}
+</style>
+
 </head>
-
 <body>
-  <div class="container">
 
-    <header>
-      <div class="logo">
-        Анастасия Белова
-        <span>БРОВИ · РЕСНИЦЫ · МАКИЯЖ</span>
-      </div>
+<div class="container">
 
-      <a href="#contact" class="btn">Записаться</a>
-    </header>
+<header>
+  <div class="logo">
+    Анастасия Белова
+    <span>БРОВИ · РЕСНИЦЫ · МАКИЯЖ</span>
+  </div>
+  <a href="#contact" class="btn">Записаться</a>
+</header>
 
-    <!-- ГЛАВНЫЙ ЭКРАН -->
-    <div class="hero">
-      <img src="brovi.jpg" alt="Брови и ресницы">
+<!-- HERO -->
+<div class="hero">
+  <img src="brovi.jpg">
 
-      <div class="hero-text">
-        <h1>
-          Брови и ресницы,<br>
-          которые подчёркивают вашу естественную красоту
-        </h1>
+  <div class="hero-text">
+    <h1>Брови и ресницы,<br>которые подчёркивают вашу естественную красоту</h1>
+    <p>Подберу форму и оттенок так, чтобы результат выглядел аккуратно и естественно каждый день.</p>
+  </div>
+</div>
 
-        <p>
-          Подберу форму и оттенок так, чтобы взгляд стал выразительнее,
-          а результат выглядел естественно каждый день.
-        </p>
-      </div>
+<!-- SERVICES -->
+<section>
+  <h2>Услуги</h2>
+
+  <div class="grid">
+    <div class="card">
+      <b>Брови</b>
+      <p>Коррекция, окрашивание и ламинирование</p>
     </div>
 
-    <!-- УСЛУГИ -->
-    <section>
-      <h2>Услуги</h2>
+    <div class="card">
+      <b>Ресницы</b>
+      <p>Классическое и объёмное наращивание</p>
+    </div>
 
-      <div class="grid">
-        <div class="card">
-          <b>Брови</b><br>
-          Коррекция, окрашивание и ламинирование
-        </div>
-
-        <div class="card">
-          <b>Ресницы</b><br>
-          Классическое и объёмное наращивание
-        </div>
-
-        <div class="card">
-          <b>Макияж</b><br>
-          Дневной, вечерний и для фотосессий
-        </div>
-      </div>
-    </section>
-
-    <!-- ДЛЯ КОГО -->
-    <section>
-      <h2>Для кого подходит</h2>
-
-      <div class="grid">
-        <div class="card">Для тех, кто хочет ухоженный вид без перебора</div>
-        <div class="card">Для тех, кому важно выглядеть естественно</div>
-        <div class="card">Для тех, кто хочет быстро записаться</div>
-      </div>
-    </section>
-
-    <!-- КОНТАКТЫ -->
-    <section id="contact">
-      <h2>Контакты</h2>
-
-      <div class="contact">
-        Telegram: @beauty_example<br>
-        Время работы: ежедневно с 9:00 до 20:00<br>
-        Город: ваш город<br><br>
-
-        <a href="#" class="btn">Написать</a>
-      </div>
-    </section>
-
+    <div class="card">
+      <b>Макияж</b>
+      <p>Дневной, вечерний и для фотосессий</p>
+    </div>
   </div>
+</section>
+
+<!-- FOR WHO -->
+<section>
+  <h2>Для кого подходит</h2>
+
+  <div class="grid">
+    <div class="card">Для тех, кто хочет ухоженный вид без перебора</div>
+    <div class="card">Для тех, кому важно выглядеть естественно</div>
+    <div class="card">Для тех, кто хочет быстро записаться</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Контакты</h2>
+
+  <div class="contact">
+    <p>Telegram: @beauty_example</p>
+    <p>Время работы: ежедневно с 9:00 до 20:00</p>
+    <p>Город: ваш город</p>
+
+    <br>
+    <a href="#" class="btn">Написать</a>
+  </div>
+</section>
+
+</div>
+
 </body>
 </html>
