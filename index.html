@@ -1,139 +1,474 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Брови и ресницы</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Анастасия Белова — брови и ресницы</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<style>
-body {
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#f6f1ef;
-  color:#333;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff7f5;
+      color: #2b2b2b;
+    }
 
-.container {
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-}
+    .container {
+      width: 92%;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
 
-.hero {
-  display:flex;
-  align-items:center;
-  gap:40px;
-}
+    header {
+      padding: 24px 0;
+    }
 
-.hero img {
-  width:45%;
-  border-radius:20px;
-}
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
 
-h1 {
-  font-size:40px;
-}
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #2b2b2b;
+    }
 
-.btn {
-  display:inline-block;
-  margin-top:20px;
-  padding:15px 25px;
-  background:#d97a8a;
-  color:white;
-  text-decoration:none;
-  border-radius:10px;
-}
+    .logo span {
+      display: block;
+      font-size: 13px;
+      color: #c85f7d;
+      margin-top: 4px;
+      letter-spacing: 1px;
+    }
 
-.badge {
-  margin-top:10px;
-  display:block;
-  color:#888;
-}
+    .nav-links {
+      display: flex;
+      gap: 26px;
+      font-size: 15px;
+    }
 
-.section {
-  margin-top:60px;
-}
+    .nav-links a {
+      color: #333;
+      text-decoration: none;
+    }
 
-.cards {
-  display:flex;
-  gap:20px;
-}
+    .top-btn {
+      background: #cf5f7d;
+      color: white;
+      padding: 13px 22px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-.card {
-  background:white;
-  padding:20px;
-  border-radius:15px;
-  flex:1;
-}
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 46px;
+      align-items: center;
+      padding: 55px 0 45px;
+    }
 
-.steps {
-  display:flex;
-  gap:20px;
-}
+    .label {
+      color: #c85f7d;
+      font-style: italic;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
 
-.step {
-  background:white;
-  padding:20px;
-  border-radius:15px;
-  flex:1;
-}
+    h1 {
+      font-size: 52px;
+      line-height: 1.12;
+      margin: 0 0 24px;
+      font-family: Georgia, serif;
+      font-weight: 500;
+    }
 
-.footer {
-  margin-top:60px;
-  padding:30px;
-  background:#d97a8a;
-  color:white;
-  text-align:center;
-  border-radius:20px;
-}
-</style>
+    h1 span {
+      color: #c85f7d;
+    }
 
+    .hero p {
+      font-size: 19px;
+      line-height: 1.6;
+      color: #5f5f5f;
+      max-width: 560px;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+
+    .main-btn {
+      background: #cf5f7d;
+      color: white;
+      padding: 17px 30px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 12px 30px rgba(207, 95, 125, 0.25);
+    }
+
+    .answer {
+      border: 1px solid #e4a8b8;
+      padding: 15px 22px;
+      border-radius: 999px;
+      color: #555;
+      background: rgba(255,255,255,0.6);
+    }
+
+    .hero-img {
+      min-height: 520px;
+      border-radius: 34px;
+      background:
+        linear-gradient(90deg, rgba(255,247,245,0.1), rgba(255,247,245,0.1)),
+        url("https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=900&q=80");
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 24px 70px rgba(0,0,0,0.12);
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin: 20px 0 55px;
+    }
+
+    .benefit {
+      background: rgba(255,255,255,0.75);
+      padding: 22px;
+      border-radius: 20px;
+      border: 1px solid #f0d6dd;
+    }
+
+    .benefit strong {
+      display: block;
+      color: #2b2b2b;
+      margin-bottom: 8px;
+    }
+
+    .benefit p {
+      margin: 0;
+      color: #666;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    section {
+      margin: 70px 0;
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      font-size: 36px;
+      text-align: center;
+      font-weight: 500;
+      margin-bottom: 34px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 24px;
+      border: 1px solid #f0d6dd;
+      min-height: 220px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.04);
+    }
+
+    .card .icon {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      margin: 0 0 16px;
+      font-size: 22px;
+    }
+
+    .card ul {
+      padding-left: 18px;
+      color: #555;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .step {
+      background: #cf5f7d;
+      color: white;
+      padding: 30px;
+      border-radius: 24px;
+      min-height: 170px;
+    }
+
+    .step span {
+      display: inline-flex;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.22);
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    .step h3 {
+      margin: 0 0 10px;
+    }
+
+    .step p {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .contact {
+      background: linear-gradient(135deg, #cf5f7d, #b84f6e);
+      color: white;
+      padding: 38px;
+      border-radius: 30px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .contact h2 {
+      text-align: left;
+      margin: 0 0 14px;
+      color: white;
+    }
+
+    .contact p {
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .contact-box {
+      background: rgba(255,255,255,0.16);
+      padding: 24px;
+      border-radius: 22px;
+    }
+
+    .contact-box p {
+      margin-bottom: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0 45px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .benefits,
+      .cards,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-img {
+        min-height: 360px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
+<header>
+  <div class="container nav">
+    <div class="logo">
+      Анастасия Белова
+      <span>БРОВИ · РЕСНИЦЫ</span>
+    </div>
 
-<!-- HERO -->
-<div class="hero">
-  <div>
-    <h1>Брови и ресницы, которые подчёркивают вашу естественную красоту</h1>
-    <p>Простой и понятный подход — чтобы вы получили именно тот результат, который хотите</p>
+    <nav class="nav-links">
+      <a href="#services">Услуги</a>
+      <a href="#steps">Как проходит запись</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
 
-    <a class="btn" href="#">Записаться</a>
-    <span class="badge">⚡ Отвечаю в течение 10–15 минут</span>
+    <a class="top-btn" href="#contacts">Записаться</a>
+  </div>
+</header>
+
+<main>
+  <div class="container hero">
+    <div>
+      <div class="label">Красота в деталях</div>
+
+      <h1>
+        Брови и ресницы,<br>
+        <span>которые подчёркивают</span><br>
+        вашу естественную красоту
+      </h1>
+
+      <p>
+        Помогаю подобрать аккуратную форму и ухоженный образ,
+        который подходит именно вам и выглядит естественно каждый день.
+      </p>
+
+      <div class="actions">
+        <a class="main-btn" href="#contacts">Записаться</a>
+        <div class="answer">⚡ Отвечаю в течение 10–15 минут</div>
+      </div>
+    </div>
+
+    <div class="hero-img"></div>
   </div>
 
-  <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348">
-</div>
-
-<!-- УСЛУГИ -->
-<div class="section">
-  <h2>Услуги</h2>
-  <div class="cards">
-    <div class="card">Брови<br>Коррекция и оформление</div>
-    <div class="card">Ресницы<br>Наращивание и уход</div>
-    <div class="card">Макияж<br>Дневной и вечерний</div>
+  <div class="container benefits">
+    <div class="benefit">
+      <strong>Премиум-материалы</strong>
+      <p>Использую качественные и безопасные составы.</p>
+    </div>
+    <div class="benefit">
+      <strong>Индивидуальный подход</strong>
+      <p>Подбираю форму и оттенок под ваши черты.</p>
+    </div>
+    <div class="benefit">
+      <strong>Стерильность</strong>
+      <p>Чистота и безопасность на первом месте.</p>
+    </div>
+    <div class="benefit">
+      <strong>Опыт и практика</strong>
+      <p>Более 5 лет помогаю девушкам выглядеть увереннее.</p>
+    </div>
   </div>
-</div>
 
-<!-- КАК ПРОХОДИТ -->
-<div class="section">
-  <h2>Как проходит запись</h2>
-  <div class="steps">
-    <div class="step">Вы пишете или оставляете заявку</div>
-    <div class="step">Обсуждаем удобное время</div>
-    <div class="step">Вы приходите и получаете результат</div>
-  </div>
-</div>
+  <section id="services">
+    <div class="container">
+      <h2>Мои услуги</h2>
 
-<!-- КОНТАКТ -->
-<div class="footer">
-  <h2>Буду рада видеть вас</h2>
-  <p>Напишите, чтобы подобрать удобное время</p>
-</div>
+      <div class="cards">
+        <div class="card">
+          <div class="icon">👁️</div>
+          <h3>Брови</h3>
+          <ul>
+            <li>Коррекция</li>
+            <li>Окрашивание</li>
+            <li>Ламинирование</li>
+          </ul>
+        </div>
 
-</div>
+        <div class="card">
+          <div class="icon">✨</div>
+          <h3>Ресницы</h3>
+          <ul>
+            <li>Классическое наращивание</li>
+            <li>2D / 3D наращивание</li>
+            <li>Ламинирование ресниц</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="icon">💄</div>
+          <h3>Макияж</h3>
+          <ul>
+            <li>Дневной макияж</li>
+            <li>Вечерний макияж</li>
+            <li>Макияж для фотосессий</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎁</div>
+          <h3>Подарочный сертификат</h3>
+          <ul>
+            <li>Красивый подарок</li>
+            <li>Для подруги или близкого человека</li>
+            <li>Можно выбрать услугу</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="steps">
+    <div class="container">
+      <h2>Как проходит запись</h2>
+
+      <div class="steps">
+        <div class="step">
+          <span>1</span>
+          <h3>Вы оставляете заявку</h3>
+          <p>Пишите удобным способом и кратко указываете, какая услуга нужна.</p>
+        </div>
+
+        <div class="step">
+          <span>2</span>
+          <h3>Подбираем время</h3>
+          <p>Обсуждаем пожелания, удобный день и подходящий формат процедуры.</p>
+        </div>
+
+        <div class="step">
+          <span>3</span>
+          <h3>Вы приходите на процедуру</h3>
+          <p>Получаете аккуратный результат и рекомендации по уходу.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <div class="container contact">
+      <div>
+        <h2>Буду рада видеть вас</h2>
+        <p>
+          Напишите, чтобы подобрать удобное время для записи.
+          Я отвечу и помогу выбрать услугу под вашу задачу.
+        </p>
+      </div>
+
+      <div class="contact-box">
+        <p><strong>Telegram:</strong> @beauty_example</p>
+        <p><strong>Время работы:</strong> 10:00 – 20:00</p>
+        <p><strong>Город:</strong> пример города</p>
+        <a class="main-btn" href="#">Записаться</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2026 Анастасия Белова. Демонстрационный сайт-визитка.
+</footer>
 
 </body>
 </html>
